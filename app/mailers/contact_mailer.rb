@@ -2,13 +2,9 @@ class ContactMailer < ActionMailer::Base
   default to: 'justindavidson23@gmail.com'
   
   
-  def contact_email(name, phone, email, event_type, body)
-    @name = name
-    @phone = phone
-    @email = email
-    @event = event_type
-    @body = body
+  def contact_email(contact)
+   @contact = contact
     
-    mail(from: email, subject: 'Contact Form Message')
+    mail(from: @contact.email, subject: 'Contact Form Message').deliver
   end
 end

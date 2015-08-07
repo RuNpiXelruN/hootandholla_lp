@@ -4,9 +4,9 @@
     <title></title>
   </head>
   <body>
-    <p>New Message from Hoot and Holla's Contact form, from <%= "#{@name}, #{@email}" %></p>
-    <p><%= @phone %></p>
-    <p><%= @event %></p>
-    <p><%= @body %></p>
+    <p>New Message from Hoot and Holla's Contact form, from <%= "#{@contact.name}, #{@contact.email}" %></p>
+    <p><%= @contact.phone %></p>
+    <p><%= @contact.event_type %></p>
+    <p><%= @contact.comments %></p>
   </body>
 </html>
